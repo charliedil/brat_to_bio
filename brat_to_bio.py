@@ -2,7 +2,6 @@ import argparse
 import nltk
 import os
 import nltk
-nltk.download("punkt")
 from nltk.tokenize import TreebankWordTokenizer as twt
 from nltk import sent_tokenize
 nltk.download("averaged_perceptron_tagger")
@@ -69,3 +68,4 @@ for filename in os.listdir(args.input_dir):
                                 break
                     if flag:
                         out.write("O"+"\n")
+                        bflag=True
